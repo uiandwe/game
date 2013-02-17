@@ -1,12 +1,18 @@
 var canvas = document.getElementsByTagName( 'canvas' )[ 0 ];
 var canvas_ready = document.getElementById('ready');
+var canvas_score = document.getElementById('score');
 
+var ctx_score=canvas_score.getContext('2d');
 var ctx_ready=canvas_ready.getContext('2d');
 var ctx = canvas.getContext( '2d' );
 
 
+
+      
+      
+      
 var W = 300, H = 600;
-var W_ready = 150, H_ready = 150;
+
 
 var BLOCK_W = W / COLS, BLOCK_H = H / ROWS;
 //var BLOCK_W_ready = W_ready / COLS, BLOCK_H_ready = H_ready / ROWS;
@@ -29,7 +35,12 @@ function render() {
     
     
     ctx.clearRect( 0, 0, W, H );
-    ctx_ready.clearRect( 0, 0, W_ready, H_ready );
+    ctx_ready.clearRect( 0, 0, 150, 150 );
+    ctx_score.clearRect( 0, 0, 300, 50 );
+    
+   
+    ctx_score.font = '20pt Calibri';
+    ctx_score.fillText('score : ' + score, 5, 25);
     
     
     ctx.strokeStyle = 'black';

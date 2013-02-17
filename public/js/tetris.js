@@ -5,6 +5,8 @@ var interval;
 var current, currentX, currentY;
 var current_ready;
 var block= [];  //생성될 객체 배열 [0] = 현재 블럭 , [1] = 다음블럭
+var score = 0;
+var count = 0;
 var shapes = [
     [ 1, 1, 1, 1 ],
     [ 1, 1, 1, 0,
@@ -88,6 +90,8 @@ function init() {
     //처음 블럭 배열 초기화
     var id = Math.floor( Math.random() * shapes.length );
     block[1] = id;
+    
+    score = 0;
 }
 
 function tick() {
@@ -128,6 +132,7 @@ function rotate( current ) {
 }
 
 function clearLines() {
+    count = 0;
     for ( var y = ROWS - 1; y >= 0; --y ) {
         var row = true;
         for ( var x = 0; x < COLS; ++x ) {
@@ -140,11 +145,15 @@ function clearLines() {
             for ( var yy = y; yy > 0; --yy ) {
                 for ( var x = 0; x < COLS; ++x ) {
                     board[ yy ][ x ] = board[ yy - 1 ][ x ];
+                    
                 }
             }
             ++y;
+            count++;
         }
     }
+    
+    score  = score + (100*count)*count;
 }
 
 function keyPress( key ) {
