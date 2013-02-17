@@ -1,0 +1,2 @@
+{"ts":1361067598424,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1361067608930,"patch":[[{"diffs":[[1,"document.body.onkeydown = function( e ) {\n    var keys = {\n        37: 'left',\n        39: 'right',\n        40: 'down',\n        38: 'rotate'\n    };\n    if ( typeof keys[ e.keyCode ] != 'undefined' ) {\n        keyPress( keys[ e.keyCode ] );\n        render();\n    }\n};"]],"start1":0,"start2":0,"length1":0,"length2":266}]],"length":266,"saved":false}
