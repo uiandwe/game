@@ -18,3 +18,4 @@
 {"ts":1361088156622,"patch":[[{"diffs":[[0,"\nborder:"],[-1,"0"],[1,"1"],[0,"px;\n}"]],"start1":162,"start2":162,"length1":14,"length2":14}]],"length":176,"saved":false}
 {"ts":1361088166450,"patch":[[{"diffs":[[0,"px;\n"],[-1,"border:1px;"],[0,"\n}"]],"start1":159,"start2":159,"length1":17,"length2":6}]],"length":165,"saved":false}
 {"ts":1361088182894,"patch":[[{"diffs":[[0," 200px;\n"],[1,"border:0px;"],[0,"\n}"]],"start1":155,"start2":155,"length1":10,"length2":21}]],"length":176,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1361251425066,"patch":[[{"diffs":[[0,"order:0px;\n}"],[1,"\n\n#test{\nposition:absolute;\nleft:620px;\n}"]],"start1":164,"start2":164,"length1":12,"length2":53}]],"length":217,"saved":false}

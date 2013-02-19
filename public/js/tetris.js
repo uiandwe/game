@@ -21,7 +21,8 @@ var shapes = [
       1, 1 ],
     [ 0, 1, 0, 0,
       1, 1, 1 ]
-];
+];  // todo 블럭 모양들 
+    // rotate시 4*4로 인한 모서리 버그 발견 -> 향후 4*4로 변경 예정
 
 var colors = [
     'cyan', 'orange', 'blue', 'yellow', 'red', 'green', 'purple'
@@ -179,8 +180,31 @@ function keyPress( key ) {
                 current = rotated;
             }
             break;
+         case 'space':
+             if ( valid( 0, 2 ) ) {
+                currentY= (currentY-1)+(fall()-1);
+            }
+            break;
+        
     }
 }
+
+
+//for문을 통해서 유효한 거리가 어느 정도인지 계산 리턴
+function fall(){
+    var i=2;
+    
+    for(;i<19; i++){
+        if(valid(0, i)){
+            i++;
+        }else{
+            break;
+        }
+    }
+    
+    return i;
+}
+
 
 function valid( offsetX, offsetY, newCurrent ) {
     offsetX = offsetX || 0;

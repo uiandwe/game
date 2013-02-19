@@ -1,2 +1,4 @@
 {"ts":1361067598424,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
 {"contributors":[],"silentsave":false,"ts":1361067608930,"patch":[[{"diffs":[[1,"document.body.onkeydown = function( e ) {\n    var keys = {\n        37: 'left',\n        39: 'right',\n        40: 'down',\n        38: 'rotate'\n    };\n    if ( typeof keys[ e.keyCode ] != 'undefined' ) {\n        keyPress( keys[ e.keyCode ] );\n        render();\n    }\n};"]],"start1":0,"start2":0,"length1":0,"length2":266}]],"length":266,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1361089476881,"patch":[[{"diffs":[[0,"rotate'\n"],[1,"        32: 'space'\n"],[0,"    };\n "]],"start1":133,"start2":133,"length1":16,"length2":36}]],"length":286,"saved":false}
+{"ts":1361089479505,"patch":[[{"diffs":[[0,"'rotate'"],[1,","],[0,"\n       "]],"start1":132,"start2":132,"length1":16,"length2":17}]],"length":287,"saved":false}
